@@ -8,7 +8,13 @@
     height: 40px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding-left: 10px;
+}
+
+.post-header div{
+    display: flex;
+    align-items: center;
 }
 
 .post-footer {

@@ -48,6 +48,7 @@ class Post extends React.Component {
     
   }
 
+ 
   aoEnviarComentario = (mensagem) => {
     const novoComentario = {
       texto : mensagem
@@ -84,8 +85,14 @@ class Post extends React.Component {
 
     return <div className={'post-container'}>
       <div className={'post-header'}>
-        <img className={'user-photo'} src={this.props.fotoUsuario} alt={'Imagem do usuario'}/>
-        <p>{this.props.nomeUsuario}</p>
+        <div>
+          <img className={'user-photo'} src={this.props.fotoUsuario} alt={'Imagem do usuario'}/>
+          <p>{this.props.nomeUsuario}</p>
+        </div>        
+        <img src="https://img.icons8.com/material-outlined/24/000000/trash--v1.png" 
+         alt='icone exclusão de post'
+         onClick={()=> this.props.deletePost(this.props.indexPost)} />
+        
       </div>
 
       <img className={'post-photo'} src={this.props.fotoPost} alt={'Imagem do post'}/>
